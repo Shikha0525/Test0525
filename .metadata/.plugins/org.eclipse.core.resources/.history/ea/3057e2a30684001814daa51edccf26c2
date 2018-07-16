@@ -1,0 +1,17 @@
+package com.qait.automation_test;
+
+import org.openqa.selenium.WebDriver;
+
+public class Status_code {
+	
+	WebDriver driver;
+	public Status_code(WebDriver driver) {
+		
+		this.driver=driver;
+		
+	}
+
+	
+	
+
+}

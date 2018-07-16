@@ -1,0 +1,94 @@
+package question1;
+
+/**
+ * Please implement Dynamic Array Interface
+ * 
+ * @author
+ *
+ */
+public class MyCollection implements DynamicArray {
+	// Uncomment commented section
+
+	/**
+	 * You can declare local/global variables as per your requirement
+	 */
+	@SuppressWarnings("unused")
+	private int[] numArray;
+
+	/**
+	 * It constructs an empty Collection object with an array capacity specified by
+	 * the integer parameter "arraySize".
+	 */
+	public MyCollection(int arraySize) {
+		numArray = new int[arraySize];
+	}
+
+	public int search(int searchingNum) {
+		int num = 0;
+		for (int i = 0; i < numArray.length; i++) {
+			if (numArray[i] == searchingNum) {
+				num = i;
+			} else
+				num = -1;
+			;
+		}
+		return num;
+		// TODO Auto-generated method stub
+
+	}
+
+	public boolean add(int numberToAdd) {
+		int index = 0;
+		int num = search(numberToAdd);
+		if (num == numArray.length) {
+			doubleCapacity();
+		}
+		if (num == -1) {
+			numArray[0] = numberToAdd;
+
+		}
+		index = search(numberToAdd);
+		if (index == -1) {
+			return false;
+		} else {
+			return true;
+		}
+		// TODO Auto-generated method stub
+
+	}
+
+	public void doubleCapacity() {
+		// TODO Auto-generated method stub
+int len=numArray.length;
+	}
+
+	public boolean remove(int numberToRemove) {
+		// TODO Auto-generated method stub
+	int num=search(numberToRemove);
+	if(num==-1) {
+		return false;
+	}
+	else {
+		numArray[num]=numArray[num+1];
+	}return true;
+	}
+
+	public int getCount() {
+		// TODO Auto-generated method stub
+		int temp1 = numArray[0];
+		int temp2 = numArray[1];
+		int n = numArray.length;
+		for (int i = 0; i < numArray.length; i++) {
+			numArray[i] = numArray[i + 2];
+		}
+		numArray[n] = temp2;
+		numArray[n - 1] = temp1;
+		return 0;
+	}
+
+	public int[] rotate(int n) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

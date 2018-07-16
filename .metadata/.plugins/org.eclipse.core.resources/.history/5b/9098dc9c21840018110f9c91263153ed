@@ -1,0 +1,15 @@
+package com.qait.automation_test;
+
+import org.openqa.selenium.WebDriver;
+
+public class Login_Form {
+
+	WebDriver driver;
+	public Login_Form(WebDriver driver) {
+		
+		this.driver=driver;
+		
+	}
+
+	
+}

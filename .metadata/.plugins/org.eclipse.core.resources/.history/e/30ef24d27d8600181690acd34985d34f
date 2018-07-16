@@ -1,0 +1,16 @@
+package com.qait.ReqRes.SeleniumGrid;
+
+import org.openqa.selenium.WebDriver;
+
+public class ListUsers {
+
+	public ListUsers(WebDriver driver) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public void displayUserName() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

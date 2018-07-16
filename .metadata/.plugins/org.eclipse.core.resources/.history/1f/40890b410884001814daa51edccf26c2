@@ -1,0 +1,40 @@
+package com.qait.automation_test;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class Tables {
+
+	WebDriver driver;
+	public Tables(WebDriver driver) {
+		
+		this.driver=driver;
+		
+	}
+	public void test() {
+		
+		driver.get(" http://10.0.31.161:9292/");
+		WebElement data_table=driver.findElement(By.linkText("Sortable Data Tables"));
+		data_table.click();
+		String url="http://10.0.31.161:9292/tables";
+		if(url.equals(driver.getCurrentUrl())) {
+			
+			System.out.println("Data Table page is displayed");
+			
+		}
+		//WebElement Due=driver.findElement(By.xpath("//*[@id=\"table1\"]/thead/tr/th[4]/span"));
+		List<WebElement> thelem = driver.findElements(By.xpath("//*[@id=\\\"table1\\\"]/thead/tr/th[4]/span"));
+		for(WebElement i:thelem)
+        {
+            System.out.println(i.getText());
+            //Reporter.log(i.getText());
+        } 
+		
+	}
+    
+	
+	
+}

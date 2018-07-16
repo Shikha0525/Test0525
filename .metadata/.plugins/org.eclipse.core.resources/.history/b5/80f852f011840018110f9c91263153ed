@@ -1,0 +1,30 @@
+package com.qait.automation_test;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+public class WYSIWYG {
+
+	WebDriver driver;
+	public WYSIWYG(WebDriver driver) {
+		
+		this.driver=driver;
+		
+	}
+	public void test() {
+		driver.get(" http://10.0.31.161:9292/");
+		driver.findElement(By.linkText("WYSIWYG Editor")).click();
+		WebElement editor=driver.findElement(By.xpath("//*[@id=\"mceu_13-body\"]"));
+		boolean ActualResult = editor.isDisplayed();
+		Assert.assertTrue(ActualResult);
+	}
+	public void text() {
+		
+		driver.findElement(By.xpath("//*[@id=\"mce_0_ifr\"]")).clear();
+		
+	}
+	
+
+}

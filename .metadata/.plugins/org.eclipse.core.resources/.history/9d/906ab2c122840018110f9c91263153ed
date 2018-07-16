@@ -1,0 +1,22 @@
+package com.qait.automation_test;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class Login_Form {
+
+	WebDriver driver;
+	public Login_Form(WebDriver driver) {
+		
+		this.driver=driver;
+		
+	}
+	public void test() {
+		
+		driver.get(" http://10.0.31.161:9292/");
+		driver.findElement(By.linkText("Form Authentication")).click();
+		
+	}
+
+	
+}

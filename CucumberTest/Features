@@ -1,0 +1,10 @@
+Features : Access hris.qainfotech.com
+
+Scenario  Login with Invalid Credentials
+When      Invalid username and password are entered
+Then      Display Error Message 
+
+Scenario  Login with valid Credentials
+When      Valid username and password are entered
+Then      Display Timesheet Page
+

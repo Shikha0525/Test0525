@@ -1,0 +1,32 @@
+package com.qait.ReqRes.SeleniumGrid;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.Test;
+
+public class Browser {
+	@Test
+	public static void main(String[] args) {
+		
+		
+		  DesiredCapabilities capabilities =  new DesiredCapabilities();
+		  capabilities.setCapability(CapabilityType.BROWSER_NAME, "chrome");
+		  capabilities.setCapability(CapabilityType.VERSION, "67.0.3396.99");
+	      //capabilities.setBrowserName("");
+	      RemoteWebDriver remoteWD = null;
+	      try
+	      {
+	         remoteWD = new RemoteWebDriver(new URL("http://:4444/wd/hub"),capabilities);
+	      } 	catch (MalformedURLException e) 
+	      {
+	    	  e.printStackTrace();
+	      }
+	      	remoteWD.get("http://www.google.com");
+		
+	}
+
+}

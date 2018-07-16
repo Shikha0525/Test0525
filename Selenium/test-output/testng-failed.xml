@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.qait.automation.Seleniuim.NewTest">
+        <methods>
+          <include name="test04userssinglenotfound"/>
+          <include name="test13registerunsuccessful"/>
+          <include name="test11delete"/>
+          <include name="test02listusers"/>
+          <include name="test12registersuccessful"/>
+          <include name="test08post"/>
+          <include name="beforetest"/>
+          <include name="test06unknownsingle"/>
+          <include name="test03singleusers"/>
+          <include name="test15loginunsuccessful"/>
+          <include name="test05unknown"/>
+          <include name="test07unknownsinglenotfound"/>
+          <include name="test09put"/>
+          <include name="test16delay"/>
+          <include name="test14loginsuccessful"/>
+          <include name="test10patch"/>
+        </methods>
+      </class> <!-- com.qait.automation.Seleniuim.NewTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

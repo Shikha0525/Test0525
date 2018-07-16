@@ -1,0 +1,71 @@
+package com.qait.automation_test;
+
+
+
+import java.util.Iterator;
+import java.util.List;
+
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.HttpClientBuilder;
+import org.jboss.netty.handler.codec.http.HttpResponse;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+
+
+public class BrokenImages {
+	
+	WebDriver driver;
+	String url="";
+	int invalidImageCount = 0;
+	public BrokenImages(WebDriver driver) {
+	
+		this.driver=driver;
+		
+	}
+
+
+	public void Test() {
+		
+		try {
+			driver.get(" http://10.0.31.161:9292/");
+			driver.findElement(By.linkText("Broken Images")).click();
+			List<WebElement> imagesList = driver.findElements(By.tagName("img"));
+			System.out.println("Total no. of images are " + imagesList.size());
+			for (WebElement imgElement : imagesList) {
+				if (imgElement != null) {
+					verifyimageActive(imgElement);
+				}
+			}
+			System.out.println("Total no. of invalid images are "	+ invalidImageCount);
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println(e.getMessage());
+		}
+		
+	}
+	
+	public void verifyimageActive(WebElement imgElement) {
+		try {
+			HttpClient client = HttpClientBuilder.create().build();
+			HttpGet request = new HttpGet(imgElement.getAttribute("src"));
+			HttpResponse response = (HttpResponse) client.execute(request);
+			// verifying response code he HttpStatus should be 200 if not,
+			// increment as invalid images count
+			if (response.getStatus().getCode() != 200)
+				invalidImageCount++;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+
+	
+	
+
+	
+	
+
+}

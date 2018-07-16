@@ -1,0 +1,27 @@
+package com.qait.ReqRes.SeleniumGrid;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class ListResource {
+	
+	 WebDriver driver;
+	 @FindBy(xpath="//*[@id=\"console\"]/div[1]/ul/li[4]")private WebElement list;
+	 @FindBy(xpath="//*[@id=\"console\"]/div[2]/div[1]/p/strong/span")private WebElement request; 
+	 public ListResource(WebDriver driver) {
+		
+		    this.driver=driver;
+			PageFactory.initElements(driver, this);
+	 }
+	
+	 public void listResource() {
+		 
+		 list.click();
+		 String actual=request.getText();
+		 String expected="/api/unknown";
+	 }
+	
+
+}

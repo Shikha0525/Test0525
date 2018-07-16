@@ -1,0 +1,22 @@
+package com.qait.automation_test;
+
+import org.openqa.selenium.WebDriver;
+
+public class Tables {
+
+	WebDriver driver;
+	public Tables(WebDriver driver) {
+		
+		this.driver=driver;
+		
+	}
+	public void test() {
+		
+		driver.get(" http://10.0.31.161:9292/");
+		driver.findElement(By.linkText("Sortable Data Tables")).click();
+		
+	}
+    
+	
+	
+}

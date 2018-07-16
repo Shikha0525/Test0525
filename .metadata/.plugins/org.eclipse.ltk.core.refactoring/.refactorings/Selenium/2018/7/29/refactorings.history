@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.qait.automation.Selenium.PageFactory.java&apos; to &apos;PageFactory1.java&apos;&#x0A;- Original project: &apos;Selenium&apos;&#x0A;- Original element: &apos;com.qait.automation.Selenium.PageFactory.java&apos;&#x0A;- Renamed element: &apos;com.qait.automation.Selenium.PageFactory1.java&apos;" description="Rename compilation unit &apos;PageFactory.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java&lt;com.qait.automation.Selenium{PageFactory.java" name="PageFactory1.java" references="false" stamp="1531720049937" version="1.0"/>
+</session>

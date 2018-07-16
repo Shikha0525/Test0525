@@ -1,0 +1,31 @@
+package mainclass;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import junit.framework.Assert;
+
+public class mainfunction {
+WebDriver driver;
+public mainfunction(WebDriver driver) {
+	this.driver=driver;
+	
+}
+public void set_connection() {
+	driver.findElement(By.linkText("http://10.0.31.161:9292/")).click();
+	System.out.println("link clicked");
+}
+public void click_basic_auth() {
+	driver.findElement(By.linkText("Basic Auth")).click();
+}
+public void click_broken_images() {
+	driver.findElement(By.linkText("Broken Images"));
+}
+public void void_check_pictures() {
+	Assert.assertEquals(driver.findElement(By.cssSelector("")).isDisplayed(),false );
+}
+public void check_extent() {
+	driver.findElement(driver.findElement(By.linkText("")));
+	Assert.assertEquals(driver.findElement(By.linkText("")), actual);
+}
+}

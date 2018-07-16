@@ -1,0 +1,13 @@
+package com.qait.automation_test;
+
+public class test {
+	
+	public static void main(String ab[]) {
+		int x;
+		if(x/0 == 0) {
+			System.out.println("true");
+		}
+		
+	}
+
+}

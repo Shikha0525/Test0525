@@ -1,0 +1,21 @@
+package com.qait.ReqRes.SeleniumGrid;
+
+import org.openqa.selenium.WebDriver;
+
+public class HomePage {
+
+	public HomePage(WebDriver driver) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public void launchHomePage(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void IsHomePageDisplayed() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

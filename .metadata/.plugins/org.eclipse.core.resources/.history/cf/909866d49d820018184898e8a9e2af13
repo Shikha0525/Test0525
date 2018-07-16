@@ -1,0 +1,17 @@
+package testcases;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
+
+public class tests {
+	WebDriver driver;
+	public tests() {
+	WebDriver driver = new WebDriver();
+	}
+@ Test
+public void test_connection() {
+	System.setProperty("chromewebdriver", "/home/qainfotech/Downloads/chromedriver.exe");
+	driver.findElement(By.linkText("http://10.0.31.161:9292/"));
+}
+}

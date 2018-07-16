@@ -1,0 +1,16 @@
+package com.qait.automation_test;
+
+import org.openqa.selenium.WebDriver;
+
+public class Exit_intent {
+
+	WebDriver driver;
+	public Exit_intent(WebDriver driver) {
+		
+		this.driver=driver;
+		
+	}
+
+	
+
+}

@@ -1,0 +1,13 @@
+package com.qait.automation_test;
+
+import org.openqa.selenium.WebDriver;
+
+public class WYSIWYG {
+
+	public WYSIWYG(WebDriver driver) {
+		
+		
+		
+	}
+
+}

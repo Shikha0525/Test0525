@@ -1,0 +1,39 @@
+package com.qait.automation_test;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+
+public class Login_Form2 {
+	
+	WebDriver driver;
+
+	public Login_Form2(WebDriver driver) {
+		
+		this.driver=driver;
+		
+	}
+     public void test() {
+		
+		driver.get(" http://10.0.31.161:9292/");
+		driver.findElement(By.linkText("Form Authentication")).click();
+		String url="http://10.0.31.161:9292/login";
+		Assert.assertEquals(driver.getCurrentUrl(), url);
+		
+	}
+	public void validCredentials() {
+		
+		driver.findElement(By.xpath("//*[@id=\"username\"]")).sendKeys("tomsmith");
+		driver.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys("SuperSecretPassword!");
+		driver.findElement(By.xpath("//*[@id=\"login\"]/button")).click();
+		String correctMessage=driver.findElement(By.id("flash")).getText();
+		System.out.println(correctMessage);
+		String expected ="You logged into a secure area!\n" + 
+				"×";
+		Assert.assertEquals(correctMessage, expected);
+	}
+		
+	}
+	
+	
+

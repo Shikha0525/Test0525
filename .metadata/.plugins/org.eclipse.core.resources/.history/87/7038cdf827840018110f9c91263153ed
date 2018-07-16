@@ -1,0 +1,35 @@
+package com.qait.automation_test;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+
+public class Login_Form {
+
+	WebDriver driver;
+	public Login_Form(WebDriver driver) {
+		
+		this.driver=driver;
+		
+	}
+	public void test() {
+		
+		driver.get(" http://10.0.31.161:9292/");
+		driver.findElement(By.linkText("Form Authentication")).click();
+		String url="http://10.0.31.161:9292/login";
+		Assert.assertEquals(driver.getCurrentUrl(), url);
+		
+	}
+
+	public void InvalidCredentials() {
+		driver.findElement(By.xpath("//*[@id=\"username\"]")).sendKeys("Shikha");
+		driver.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys("Shikha0525");
+		driver.findElement(By.xpath("//*[@id=\"login\"]/button")).click();
+		String errorMessage=driver.findElement(By.id("flash")).getText();
+		System.out.println(errorMessage);
+		String expected ="Your username is invalid!\n" + 
+				"×";
+		Assert.assertEquals(errorMessage, expected);
+	}
+	
+}

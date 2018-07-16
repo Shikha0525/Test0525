@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="8" passed="8">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="10372" started-at="2018-07-10T11:23:38Z" finished-at="2018-07-10T11:23:48Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="10372" started-at="2018-07-10T11:23:38Z" finished-at="2018-07-10T11:23:48Z">
+      <class name="com.qait.automation_test.NewTest">
+        <test-method status="PASS" signature="test01BasicAuth()[pri:0, instance:com.qait.automation_test.NewTest@b2d8dcd]" name="test01BasicAuth" duration-ms="1247" started-at="2018-07-10T16:53:38Z" finished-at="2018-07-10T16:53:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test01BasicAuth -->
+        <test-method status="PASS" signature="test02BrokenImages()[pri:0, instance:com.qait.automation_test.NewTest@b2d8dcd]" name="test02BrokenImages" duration-ms="375" started-at="2018-07-10T16:53:39Z" finished-at="2018-07-10T16:53:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test02BrokenImages -->
+        <test-method status="PASS" signature="test03exit_intent()[pri:0, instance:com.qait.automation_test.NewTest@b2d8dcd]" name="test03exit_intent" duration-ms="5482" started-at="2018-07-10T16:53:39Z" finished-at="2018-07-10T16:53:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test03exit_intent -->
+        <test-method status="PASS" signature="test04table()[pri:0, instance:com.qait.automation_test.NewTest@b2d8dcd]" name="test04table" duration-ms="369" started-at="2018-07-10T16:53:45Z" finished-at="2018-07-10T16:53:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test04table -->
+        <test-method status="PASS" signature="test05status_code()[pri:0, instance:com.qait.automation_test.NewTest@b2d8dcd]" name="test05status_code" duration-ms="405" started-at="2018-07-10T16:53:45Z" finished-at="2018-07-10T16:53:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test05status_code -->
+        <test-method status="PASS" signature="test06WYSIWYG()[pri:0, instance:com.qait.automation_test.NewTest@b2d8dcd]" name="test06WYSIWYG" duration-ms="1216" started-at="2018-07-10T16:53:46Z" finished-at="2018-07-10T16:53:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test06WYSIWYG -->
+        <test-method status="PASS" signature="test07login()[pri:0, instance:com.qait.automation_test.NewTest@b2d8dcd]" name="test07login" duration-ms="653" started-at="2018-07-10T16:53:47Z" finished-at="2018-07-10T16:53:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test07login -->
+        <test-method status="PASS" signature="test08login2()[pri:0, instance:com.qait.automation_test.NewTest@b2d8dcd]" name="test08login2" duration-ms="596" started-at="2018-07-10T16:53:47Z" finished-at="2018-07-10T16:53:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test08login2 -->
+      </class> <!-- com.qait.automation_test.NewTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

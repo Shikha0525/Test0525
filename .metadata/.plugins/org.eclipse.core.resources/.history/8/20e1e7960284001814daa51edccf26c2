@@ -1,0 +1,16 @@
+package com.qait.automation_test;
+
+import org.openqa.selenium.WebDriver;
+
+public class Tables {
+
+	WebDriver driver;
+	public Tables(WebDriver driver) {
+		
+		this.driver=driver;
+		
+	}
+    
+	
+	
+}
